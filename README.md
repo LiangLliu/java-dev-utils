@@ -36,6 +36,8 @@
 * [FileUtils类](src/main/java/com/LiangLliu/utils/file/FileUtils.java)
 * [图片压缩](src/main/java/com/LiangLliu/utils/file/image/ImageUtils.java)
 
+## [协程工具类](src/main/java/com/LiangLliu/utils/async)
+* [AsyncExecutor.java](src/main/java/com/LiangLliu/utils/async/AsyncExecutor.java)
 
 ## License
 
