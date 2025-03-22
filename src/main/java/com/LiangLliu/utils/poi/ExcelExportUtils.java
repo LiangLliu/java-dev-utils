@@ -139,7 +139,9 @@ public class ExcelExportUtils {
         var cellStyles = cellStyleMapper.apply(workbook);
         generateDataRows(sheet, resources, headers, cellValueMapper, cellStyles);
 
-        try (FileOutputStream fileOutputStream = new FileOutputStream(excelFile)) {
+        try (
+                FileOutputStream fileOutputStream = new FileOutputStream(excelFile)
+        ) {
             workbook.write(fileOutputStream);
             fileOutputStream.flush();
             fileOutputStream.close();
@@ -147,7 +149,10 @@ public class ExcelExportUtils {
         } catch (IOException ignored) {
 
         } finally {
-            workbook.dispose();
+            try {
+                workbook.close();
+            } catch (IOException ignored) {
+            }
         }
 
         return null;
