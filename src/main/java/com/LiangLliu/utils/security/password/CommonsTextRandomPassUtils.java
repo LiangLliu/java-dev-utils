@@ -51,8 +51,7 @@ public class CommonsTextRandomPassUtils {
     }
 
     public static String generateRandomCharacters(int length) {
-        RandomStringGenerator pwdGenerator = getRandomStringGenerator(48, 57);
-        return pwdGenerator.generate(length);
+        return generateRandomNumbers(length);
     }
 
     public static String generateRandomSpecialCharacters(int length) {
@@ -64,6 +63,6 @@ public class CommonsTextRandomPassUtils {
                                                                   int maximumCodePoint) {
         return new RandomStringGenerator.Builder()
                 .withinRange(minimumCodePoint, maximumCodePoint)
-                .build();
+                .get();
     }
 }
