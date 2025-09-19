@@ -6,12 +6,12 @@ plugins {
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(21)
+        languageVersion = JavaLanguageVersion.of(25)
     }
 }
 
-group 'org.LiangLliu'
-version '1.0-SNAPSHOT'
+group = 'org.LiangLliu'
+version = '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
